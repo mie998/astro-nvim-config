@@ -4,10 +4,9 @@
 -- lower level configuration and more robust one. (which-key will
 -- automatically pick-up stored data by this setting.)
 return {
-  -- first key is the mode
+  -- second key is the lefthand side of the map
+  -- mappings seen under group name "Buffer"
   n = {
-    -- second key is the lefthand side of the map
-    -- mappings seen under group name "Buffer"
     ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
     ["<leader>bD"] = {
       function()
@@ -15,14 +14,42 @@ return {
       end,
       desc = "Pick to close",
     },
-    -- tables with the `name` key will be registered with which-key if it's installed
-    -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
-    -- quick save
-    -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+
+    -- quickFix
+    ["[c"] = { "<cmd>cprevious<cr>", desc = "Previous quickfix"},
+    ["]c"] = { "<cmd>cnext<cr>", desc = "Next quickfix"},
+    ["[q"] = { "<cmd>colder<cr>", desc = "Open quickfix" },
+    ["]q"] = { "<cmd>cnewer<cr>", desc = "Close quickfix" },
+
+    -- fastmove
+    ["H"] = { "10h", desc = "Fastmove left" },
+    ["J"] = { "10j", desc = "Fastmove down" },
+    ["K"] = { "10k", desc = "Fastmove up" },
+    ["L"] = { "10l", desc = "Fastmove right" },
   },
   t = {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
+  },
+  i = {
+    -- escape
+    ["jj"] = { "<Esc>", desc = "Escape", silent = true },
+
+    -- Emacs like
+    ['<C-j>']={ '<Down>'},
+    ['<C-k>']={ '<Up>'},
+    ['<C-h>']={ '<Left>'},
+    ['<C-l>']={ '<Right>'},
+    ['<C-b>']={ '<Left>'},
+    ['<C-f>']={ '<Right>'},
+    ['<C-a>']={ '<Esc> I'},
+    ['<C-e>']={ '<Esc> A'}
+  },
+  c = {
+
+  },
+  x = {
+
   },
 }
