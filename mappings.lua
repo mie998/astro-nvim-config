@@ -15,6 +15,10 @@ return {
       desc = "Pick to close",
     },
     ["<leader>b"] = { name = "Buffers" },
+    ["<leader>m"] = {
+      function() vim.lsp.buf.hover() end,
+      desc = "Hover symbol detail"
+    },
 
     -- quickFix
     ["[c"] = { "<cmd>cprevious<cr>", desc = "Previous quickfix"},
@@ -23,10 +27,13 @@ return {
     ["]q"] = { "<cmd>cnewer<cr>", desc = "Close quickfix" },
 
     -- fastmove
-    ["H"] = { "10h", desc = "Fastmove left" },
-    ["J"] = { "10j", desc = "Fastmove down" },
-    ["K"] = { "10k", desc = "Fastmove up" },
-    ["L"] = { "10l", desc = "Fastmove right" },
+    ["H"] = { "10h", desc = "Fastmove left", silent = true },
+    ["J"] = { "10j", desc = "Fastmove down", silent = true },
+    ["K"] = { "10k", desc = "Fastmove up", silent = true },
+    ["L"] = { "10l", desc = "Fastmove right", silent = true },
+
+    -- explorer
+    ["<leader>q"] = { ":Neotree toggle<cr>", desc = "Toggle explorer" },
   },
   t = {
     -- setting a mapping to false will disable it
@@ -38,7 +45,7 @@ return {
 
     -- Emacs like
     ['<C-j>']={ '<Down>'},
-    ['<C-k>']={ '<Up>'},
+    ['<C-k>']={ '<Up>' },
     ['<C-h>']={ '<Left>'},
     ['<C-l>']={ '<Right>'},
     ['<C-b>']={ '<Left>'},
@@ -51,5 +58,10 @@ return {
   },
   x = {
 
+  },
+  v = {
+    -- Move line
+    ['<A-j>']={ ":move '>+1<CR>gv-gv", desc = "Move lines of code up" },
+    ['<A-k>']={ ":move '<-2<CR>gv-gv", desc = "Move lines of code down" },
   },
 }
