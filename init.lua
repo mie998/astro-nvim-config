@@ -84,6 +84,5 @@ return {
   end,
 
   -- use these files for configuration without astroNvim style config
-  -- require("settings/keymaps")
   -- require("settings/options")
 }
