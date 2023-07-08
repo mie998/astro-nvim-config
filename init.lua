@@ -48,10 +48,15 @@ return {
       --   return true
       -- end
     },
+
     -- enable servers that you already have installed without mason
     servers = {
       -- "pyright"
     },
+    -- server settings that you already have installed without mason
+    ["server-settings"] = {
+      -- pyright = {},
+    }
   },
 
   -- Configure require("lazy").setup() options
