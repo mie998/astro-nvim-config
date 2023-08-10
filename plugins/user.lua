@@ -17,7 +17,6 @@ return {
             jump_next = "]]",
             accept = "<CR>",
             refresh = "gr",
-            open = "<M-CR>"
           },
           layout = {
             position = "bottom", -- | top | left | right
@@ -28,10 +27,10 @@ return {
           enabled = true,
           auto_trigger = true,
           keymap = {
-            accept = "<M-l>",
-            next = "<M-]>",
-            prev = "<M-[>",
-            dismiss = "<M-,>",
+            accept = "<C-l>",
+            next = "<D-]>",
+            prev = "<D-[>",
+            dismiss = "<D-,>",
           },
         },
         filetypes = {
