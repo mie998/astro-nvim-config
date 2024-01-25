@@ -31,9 +31,6 @@ return {
     ["J"] = { "10j", desc = "Fastmove down", silent = true },
     ["K"] = { "10k", desc = "Fastmove up", silent = true },
     ["L"] = { "10l", desc = "Fastmove right", silent = true },
-
-    -- explorer
-    ["<leader>q"] = { ":Neotree toggle<cr>", desc = "Toggle explorer" },
   },
   t = {
     -- setting a mapping to false will disable it

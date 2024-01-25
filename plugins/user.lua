@@ -1,8 +1,22 @@
 return {
   -- You can also add new plugins here as well:
   -- Add plugins, the lazy syntax
-  -- "andweeb/presence.nvim",
-  "github/copilot.vim",
+  {
+    "tpope/vim-surround",
+    event = "BufRead",
+  },
+  {
+    "tpope/vim-repeat",
+    event = "BufRead",
+  },
+  {
+    "tpope/vim-abolish",
+    event = "BufRead",
+  },
+  {
+    "github/copilot.vim",
+    config = function() end
+  },
   {
     "zbirenbaum/copilot.lua",
     cmd = "Copilot",

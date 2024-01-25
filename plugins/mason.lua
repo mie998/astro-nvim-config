@@ -35,6 +35,7 @@ return {
         "prettier",
         "eslintd",
         "stylua",
+        "rustfmt",
         "yamlfmt",
         "clang-format",
       })
